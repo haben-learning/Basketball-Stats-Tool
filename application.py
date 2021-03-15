@@ -21,12 +21,10 @@ def clean_data():
     for item in PLAYERS_COPY:
         if item['experience'][0] == 'Y':
             item['experience'] = True
-            item['height'] = int(item['height'][0:3])
-            item['guardians'] = item['guardians'].split("and")
         else:
             item['experience'] = False
-            item['height'] = int(item['height'][0:3])
-            item['guardians'] = item['guardians'].split("and")
+        item['height'] = int(item['height'][0:3])
+        item['guardians'] = item['guardians'].split("and")
 
 
 # Takes the updated player information and balances each team with the
